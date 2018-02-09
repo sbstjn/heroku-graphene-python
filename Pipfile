@@ -8,10 +8,7 @@ verify_ssl = true
 
 graphene = "*"
 requests = "*"
-json = "*"
 sanic = "*"
-GraphQLView = "*"
-
 
 [requires]
 

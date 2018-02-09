@@ -18,8 +18,8 @@ class Person (graphene.ObjectType):
 class Query (graphene.ObjectType):
     '''Query description'''
 
-    person = graphene.Field(Person, id=graphene.ID(required=True))
-    people = graphene.List(Person)
+    person = graphene.Field(Person, id=graphene.ID(required=True), description='Description for Person object')
+    people = graphene.List(Person, description='Description for People list')
 
     def resolve_person(self, info, id):
         r = requests.get("https://to23rx1sik.execute-api.us-west-1.amazonaws.com/Prod/person/" + id)

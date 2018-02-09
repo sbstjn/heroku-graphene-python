@@ -1,5 +1,8 @@
+#!/usr/bin/env python3
+
 import graphene
 import requests
+import os
 import json as jsonRaw
 
 from sanic import Sanic
@@ -44,4 +47,7 @@ app = Sanic()
 app.add_route(GraphQLView.as_view(schema=schema, graphiql=True), '/graphql')
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8000)
+    app.run(
+        host='0.0.0.0',
+        port=os.environ.get('PORT') or 8000
+    )

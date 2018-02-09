@@ -9,6 +9,7 @@ verify_ssl = true
 graphene = "*"
 requests = "*"
 sanic = "*"
+sanic_graphql = "*"
 
 [requires]
 

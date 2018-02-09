@@ -9,9 +9,11 @@ from sanic import Sanic
 from sanic_graphql import GraphQLView
 
 class Person (graphene.ObjectType):
-    id = graphene.ID()
-    name = graphene.String()
-    age = graphene.Int()
+    '''A single human person'''
+
+    id = graphene.ID(description='The ID of the person')
+    name = graphene.String(description='The name of the person')
+    age = graphene.Int(description='The age of the person in years')
 
 class Query(graphene.ObjectType):
     person = graphene.Field(Person, id=graphene.ID(required=True))

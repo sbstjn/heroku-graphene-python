@@ -6,7 +6,11 @@ verify_ssl = true
 
 [packages]
 
-gunicorn = "*"
+graphene = "*"
+requests = "*"
+json = "*"
+sanic = "*"
+GraphQLView = "*"
 
 
 [requires]

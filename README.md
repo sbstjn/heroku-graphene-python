@@ -1,1 +1,1 @@
-# Heroky Graphene API
+# Heroky Graphene Example
